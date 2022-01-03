@@ -118,7 +118,7 @@ def primele_numere():
         print(i)
 primele_numere()
 
-print("-----Problema 3-----")
+print("-----Problema 4-----")
 #   Write a program in Python to display the first the sum and the average of numbers from 200 to 450
 def suma_medie():
     sum = 0
