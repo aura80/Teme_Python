@@ -51,6 +51,13 @@ d = "$"
 newOrder = "resta{}t"
 print("9. r --> $ : ", newOrder.format(d))
 
+print("---Varianta 9.2")
+cuv = "restart"
+first = cuv[0]
+cuv = cuv.replace("r", '$')
+final_cuv = first + cuv[1:]
+print(final_cuv)
+
 print("---")
 print("10. I have 1000 dollars so I can buy 3 football for 450.00 dollars.")
 print(f'    I have 1000 dollars so I can buy 3 football for 450.00 dollars.')

@@ -76,6 +76,9 @@ elif m == 12:
 else:
     print("Luna invalida")
 
+print("\n-----Problema 1 varianta 3-----")
+
+
 print("\n-----Problema 2-----")
 #   Write a Python program to find the zodiacal sign when you have the day and  the month of birth
 def zodiacal():

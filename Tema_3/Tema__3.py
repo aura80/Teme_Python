@@ -224,3 +224,9 @@ if no == multiplu or no == multiplu + 1:
     print("Special  ---   ", bool(no))
 else:
     print("Special  ---   ", bool(0))
+
+n = int(input("numarul este: "))
+if n % 11 == 0 or (n-1) % 11 == 0:   #  sau if n%11 == 0 or n%11 == 1:
+    print("este numar special")
+else:
+    print("nu este numar special")
