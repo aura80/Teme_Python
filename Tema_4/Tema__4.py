@@ -133,4 +133,3 @@ def suma_medie():
 suma_medie()
 
 
-
