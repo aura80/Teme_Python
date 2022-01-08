@@ -132,3 +132,5 @@ def suma_medie():
     print("Average = ", average)
 suma_medie()
 
+
+
