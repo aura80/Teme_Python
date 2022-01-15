@@ -507,31 +507,7 @@ def meniu():
 
 meniu()
 
-def meniu2():
-        print("\n-------MENIU-------")
-        print("1. Problema 'de cate ori 9'              6. Problema 'pattern'        11. Problema 'concatenare'             16. Problema 'remove empty \"\" '   21. Problema 'nr prim'             \n"
-              "2. Problema 'omite doua cifre'           7. Problema 'descrescator'   12. Problema 'sub_list'                17. Problema 'square'             22. Problema 'nr prime in interval'  \n"
-              "3. Problema 'suma nr. intre 20 si 100'   8. Problema 'min-max'        13. Problema 'suma pe diagonala'       18. Problema 'inversa'            23. Exit                             \n"
-              "4. Problema 'Fizz-Buzz'                  9. Problema 'how many times' 14. Problema 'add-list 7000'           19. Problema 'Fibonacci'                                               \n"
-              "5. Problema 'multiplu de n'              10. Problema 'sterge'        15. Problema 'inlocuieste 20 cu 200'   20. Problema 'triunghi * '                                             \n"
-              )
-        n = int(input("Alege problema: "))
-        a = noua()
-        b = omite()
-        c = sum20_100()
-        d = Fizz_Buzz()
-        e = multi(3)
-        f = pattern()
-        l = [a, b, c, d, e, f]
-        l[3]
-        # for i in range(0, 6):
-        #     if n == i+1:
-        #         l[i]
-        #         break
-        #     else:
-        #         exit
 
-meniu2()
 
 
 
