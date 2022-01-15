@@ -231,6 +231,17 @@ print("\n-------Problema 9-------")
 # *****Using .remove() method, clear the last element of the list.
 print("---Varianta 1   - remove last element")
 lista=[55, 6, 777, 54, 6, 76, 101, 1, 6, 2, 6, 7]
+
+def ultim_0():
+    lst = [55, 6, 777, 54, 6, 76, 101, 1, 6, 2, 6]
+    print("Lista initiala:", lst)
+    lst.reverse()
+    lst.remove(lst[0])
+    lst.reverse()
+    print("Cu remove():   ", lst)
+ultim_0()
+
+print("\n---Varianta 2   - remove last element")
 def ultim(lista):
     ultim = lista[-1]
     for i in lista:
@@ -248,7 +259,7 @@ print(f'\nLista este: \n{[55, 6, 777, 54, 22222, 76, 101, 1, 22222, 2, 22222]}')
 print(f'Ramane: ')
 ultim([55, 6, 777, 54, 22222, 76, 101, 1, 22222, 2, 22222])
 
-print("\n---Varianta 2 ")
+print("\n---Varianta 3 ")
 def fructe(x):
     l = ["mere", "pere", "kiwi", "mango", "portocale", "caise"]
     print(l)
@@ -262,6 +273,21 @@ print("\n-------Problema 10-------")
 # # *****Concatenate two lists in the following order
 # # list1 = ["Hello ", "take "]
 # # list2 = ["Dear", "Sir"]
+
+print("---Varianta 0 ")
+
+def conc2():
+    list1 = ["Hello ", "take "]
+    list2 = ["Dear", "Sir"]
+    l = []
+    for i in list1:
+        for j in list2:
+            l.append(i + j)
+    print("Lista:      ", l)
+
+    res = [x + y for x in list1 for y in list2]
+    print("Pe scurt:   ", res)
+conc2()
 
 print("---Varianta 1 ")
 l = []
@@ -631,3 +657,51 @@ def brad3():
         brad = i * ' ' + '* ' + abs(i-n) * '* '
         print(brad)
 brad3()
+
+def prime1():
+
+    n = int(input("Dati un numar: "))
+    k = 0
+    for i in range(1, n + 1) :
+        if n % i == 0 :
+            k += 1
+
+    if k == 2:
+        print(f'Numarul  -  {n}  -  este numar prim')
+    else:
+        print(f'Numarul  -  {n}  -  nu este numar prim')
+
+prime1()
+
+def prime2():
+    l = []
+    x = 0
+    for j in range(2, 101):
+        k = False
+        for i in range(2, round(j/2)+1) :
+            if j % i == 0 :
+                k = True
+        if k == False:
+            print(f'Numarul  -  {j}  -  este numar prim')
+            l.append(j)
+            x += 1
+    print(f'Lista numerelor prime intre 1 si 100 este: \n * {l}')
+    print(f'Intre 1 si 100 avem  - {x} -  numere prime')
+
+prime2()
+
+def prim101():
+    l = []
+    k = 0
+    for num in range(1, 101):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                l.append(num)
+                k += 1
+    print("Lista numerelor prime intre 1 si 100 este: ")
+    print(" *",l)
+    print(f'Intre 1 si 100 avem  - {k} -  numere prime')
+prim101()
