@@ -4,7 +4,6 @@ Create a method display() that display the length, width, perimeter and area of 
 Create a Parallelepipede child class inheriting from the Rectangle class and with a height attribute and another Volume() method to calculate
 the volume of the Parallelepiped'''
 
-
 def Pr1():
     print("--- Problem 1 - class Rectangle ---")
     print()
@@ -99,7 +98,7 @@ Create a method displayStudent() that displays the name, age and section of an o
 Create a student object via an instantiation on the Student class and then test the displayStudent method.'''
 
 
-def Person():
+def Pr3():
     class Person:
         print("--- Problem 3 - class Person ---")
         print()
@@ -134,7 +133,7 @@ def Person():
     print()
 
 
-Person()
+Pr3()
 
 '''4.Create a Python class called BankAccount which represents a bank account, having as attributes: accountNumber (numeric type), name (name of the account owner as string type), balance.
 Create a constructor with parameters: accountNumber, name, balance.
@@ -143,7 +142,7 @@ Create a Withdrawal() method  which manages withdrawals actions.
 Create an bankFees() method to apply the bank fees with a percentage of 5% of the balance account.
 Create a display() method to display account details.'''
 
-def Bank():
+def Pr4():
     class BankAccount:
         print("----------------------------------------- Problem 4 - class BankAccount ------------------------------------------")
         print()
@@ -227,7 +226,7 @@ def Bank():
         elif i == 3:
             exit()
 
-Bank()
+Pr()
 
 '''5
 1 - Create a Coputation class with a default constructor (without parameters) allowing to perform various calculations on integers numbers.
