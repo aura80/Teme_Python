@@ -143,7 +143,6 @@ Create a Withdrawal() method  which manages withdrawals actions.
 Create an bankFees() method to apply the bank fees with a percentage of 5% of the balance account.
 Create a display() method to display account details.'''
 
-#'''
 def Bank():
     class BankAccount:
         print("--- Problem 4 - class BankAccount ---")
@@ -155,7 +154,7 @@ def Bank():
             self.balance = balance
 
         def Deposit(self):
-            print("Accounts no. and names: 123 - Mark Twain and 1234 - Tom Sawyer")
+            print("Choose between the two accounts no. and names: 123 - Mark Twain / 124 - Tom Sawyer")
             c = int(input("Add account no.: "))
             n = input("Add account owner: ")
             print(f'Account no. : {self.accountNumber}\nOwner\'s name: {self.name}\nBalance:      {self.balance} $')
@@ -163,17 +162,17 @@ def Bank():
             l = []
             while True:
                 if c == self.accountNumber and n == self.name:
-                    bani = int(input("Add money(0 exit): "))
+                    bani = float(input("Add money(0 out): "))
                     self.balance += bani
                     print(f'New balance: {self.balance} $ ')
                     if bani == 0:
                         d.update({c: n, n: self.balance})
                         l.append(self.balance)
                         print(d)
-                        print(f'\n *    Cont {self.accountNumber} -> {d[self.name]} $ cash')
+                        print(f'\n *    Cont no.: {self.accountNumber} -> {round(d[self.name],2)} $ cash')
                         for i in range(len(l)):
                             pass
-                        print(f' *    {self.name} has in his account {l[i]} $')
+                        print(f' *    {self.name} has in his account {round(l[i],2)} $')
                         ret = l[i]
                         return ret
                         exit()
@@ -183,32 +182,36 @@ def Bank():
                     exit()
 
         def Withdrawal(self):
-            wd = int(input("\nWithdrawal amount: "))
+            wd = float(input("\nWithdrawal amount: "))
             self.balance -= wd
-            print(f'The amount left in {self.name}\'s account is: {self.balance} $\n')
+            print(f'The amount left in {self.name}\'s account is: {round(self.balance, 2)} $\n')
 
-        def bankFees(self):
-            percent = float(5 / 100) * self.balance
+        def bankFees(self, per):
+            self.per = per
+            percent = float(self.per / 100) * self.balance
             percentage = self.balance - percent
             print("Taxes 5% ")
-            print(f'{self.name} pays {int(percent)} $ in taxes')
-            print(f'{self.name} still has {percentage} $ in his account after paying his taxes\n')
+            print(f'{self.name} pays {round(percent, 2)} $ in taxes')
+            print(f'{self.name} still has {round(percentage, 2)} $ in his account after paying his taxes\n')
 
         def display(self):
-            pass
+            print(f'--> Owner: {self.name}; ' + ' ---' + " Account no. " + f'{self.accountNumber}; ' + ' --' + " Amount: " + f'{round(self.balance, 2)} $; ' + ' --' + " Taxes: " + f'{round(float(self.per / 100) * self.balance,2)} $  representing {self.per}% fees')
 
     b = BankAccount(123, "Mark Twain", 8000)
     b.Deposit()
     b.Withdrawal()
-    b.bankFees()
+    b.bankFees(5)
 
-    ba = BankAccount(1234, "Tom Sawyer", 500)
+    ba = BankAccount(124, "Tom Sawyer", 500)
     ba.Deposit()
     ba.Withdrawal()
-    ba.bankFees()
+    ba.bankFees(5)
+
+    b.display()
+    ba.display()
 
 Bank()
-#'''
+
 '''5
 1 - Create a Coputation class with a default constructor (without parameters) allowing to perform various calculations on integers numbers.
 2 - Create a method called Factorial() which allows to calculate the factorial of an integer. Test the method by instantiating the class.
@@ -221,7 +224,7 @@ Bank()
 8. Create another listDivPrim() method that gets all the prime divisors of a given integer.'''
 
 class Computation:
-    print("--- Problem 5 - class Integers ---")
+    print("\n--- Problem 5 - class Integers ---")
     print()
     def __init__(self):
         self.n1 = 100
@@ -232,6 +235,8 @@ class Computation:
     def Dif(self):
         dif = self.n2 - self.n1
         print("Diferenta: ", dif)
+    def testPrim(self):
+        pass
 
 class Multi(Computation):
     def Mul(self):
