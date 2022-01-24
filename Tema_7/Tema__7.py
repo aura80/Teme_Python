@@ -143,7 +143,7 @@ Create a Withdrawal() method  which manages withdrawals actions.
 Create an bankFees() method to apply the bank fees with a percentage of 5% of the balance account.
 Create a display() method to display account details.'''
 
-
+#'''
 def Bank():
     class BankAccount:
         print("--- Problem 4 - class BankAccount ---")
@@ -208,7 +208,7 @@ def Bank():
     ba.bankFees()
 
 Bank()
-
+#'''
 '''5
 1 - Create a Coputation class with a default constructor (without parameters) allowing to perform various calculations on integers numbers.
 2 - Create a method called Factorial() which allows to calculate the factorial of an integer. Test the method by instantiating the class.
@@ -246,6 +246,13 @@ class Multi(Computation):
         for i in range(1,n+1):
             p = p * i
         print(f'Factorialul lui {self.n} este: {p}')
+    def Sum(self, n):
+        self.n = n
+        s = 0
+        for i in range(1,n+1):
+            s = s + i
+        print(f'Suma primelor {self.n} numere este: {s}')
+
 
 s = Multi()
 s.Suma()
@@ -253,5 +260,6 @@ s.Dif()
 s.Mul()
 s.Div()
 s.Factorial(5)
+s.Sum(5)
 
 
