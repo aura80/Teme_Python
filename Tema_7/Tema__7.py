@@ -144,71 +144,70 @@ Create an bankFees() method to apply the bank fees with a percentage of 5% of th
 Create a display() method to display account details.'''
 
 
-def Bank():
-    class BankAccount:
-        print("--- Problem 4 - class BankAccount ---")
-        print()
-
-        def __init__(self, accountNumber, name, balance):
-            self.accountNumber = accountNumber
-            self.name = name
-            self.balance = balance
-
-        def Deposit(self):
-            print("Accounts no. and names: 123 - Mark Twain and 1234 - Tom Sawyer")
-            c = int(input("Add account no.: "))
-            n = input("Add account owner: ")
-            print(f'Account no. : {self.accountNumber}\nOwner\'s name: {self.name}\nBalance:      {self.balance} $')
-            d = {c: n, n: 0}
-            l = []
-            while True:
-                if c == self.accountNumber and n == self.name:
-                    bani = int(input("Add money(0 exit): "))
-                    self.balance += bani
-                    print(f'New balance: {self.balance} $ ')
-                    if bani == 0:
-                        d.update({c: n, n: self.balance})
-                        l.append(self.balance)
-                        print(d)
-                        print(f'\n *    Cont {self.accountNumber} -> {d[self.name]} $ cash')
-                        for i in range(len(l)):
-                            pass
-                        print(f' *    {self.name} has in his account {l[i]} $')
-                        ret = l[i]
-                        return ret
-                        exit()
-                    # print()
-                else:
-                    print("Account no. or name do not match! ")
-                    exit()
-
-        def Withdrawal(self):
-            wd = int(input("\nWithdrawal amount: "))
-            self.balance -= wd
-            print(f'The amount left in {self.name}\'s account is: {self.balance} $\n')
-
-        def bankFees(self):
-            percent = float(5 / 100) * self.balance
-            percentage = self.balance - percent
-            print("Taxes 5% ")
-            print(f'{self.name} pays {int(percent)} $ in taxes')
-            print(f'{self.name} still has {percentage} $ in his account after paying his taxes\n')
-
-        def display(self):
-            pass
-
-    b = BankAccount(123, "Mark Twain", 8000)
-    b.Deposit()
-    b.Withdrawal()
-    b.bankFees()
-
-    ba = BankAccount(1234, "Tom Sawyer", 500)
-    ba.Deposit()
-    ba.Withdrawal()
-    ba.bankFees()
-
-
-Bank()
+# def Bank():
+#     class BankAccount:
+#         print("--- Problem 4 - class BankAccount ---")
+#         print()
+#
+#         def __init__(self, accountNumber, name, balance):
+#             self.accountNumber = accountNumber
+#             self.name = name
+#             self.balance = balance
+#
+#         def Deposit(self):
+#             print("Accounts no. and names: 123 - Mark Twain and 1234 - Tom Sawyer")
+#             c = int(input("Add account no.: "))
+#             n = input("Add account owner: ")
+#             print(f'Account no. : {self.accountNumber}\nOwner\'s name: {self.name}\nBalance:      {self.balance} $')
+#             d = {c: n, n: 0}
+#             l = []
+#             while True:
+#                 if c == self.accountNumber and n == self.name:
+#                     bani = int(input("Add money(0 exit): "))
+#                     self.balance += bani
+#                     print(f'New balance: {self.balance} $ ')
+#                     if bani == 0:
+#                         d.update({c: n, n: self.balance})
+#                         l.append(self.balance)
+#                         print(d)
+#                         print(f'\n *    Cont {self.accountNumber} -> {d[self.name]} $ cash')
+#                         for i in range(len(l)):
+#                             pass
+#                         print(f' *    {self.name} has in his account {l[i]} $')
+#                         ret = l[i]
+#                         return ret
+#                         exit()
+#                     # print()
+#                 else:
+#                     print("Account no. or name do not match! ")
+#                     exit()
+#
+#         def Withdrawal(self):
+#             wd = int(input("\nWithdrawal amount: "))
+#             self.balance -= wd
+#             print(f'The amount left in {self.name}\'s account is: {self.balance} $\n')
+#
+#         def bankFees(self):
+#             percent = float(5 / 100) * self.balance
+#             percentage = self.balance - percent
+#             print("Taxes 5% ")
+#             print(f'{self.name} pays {int(percent)} $ in taxes')
+#             print(f'{self.name} still has {percentage} $ in his account after paying his taxes\n')
+#
+#         def display(self):
+#             pass
+#
+#     b = BankAccount(123, "Mark Twain", 8000)
+#     b.Deposit()
+#     b.Withdrawal()
+#     b.bankFees()
+#
+#     ba = BankAccount(1234, "Tom Sawyer", 500)
+#     ba.Deposit()
+#     ba.Withdrawal()
+#     ba.bankFees()
+#
+# Bank()
 
 '''5
 1 - Create a Coputation class with a default constructor (without parameters) allowing to perform various calculations on integers numbers.
@@ -221,5 +220,31 @@ Bank()
 6 - Create a static listDiv() method that gets all the divisors of a given integer on new list called  Ldiv. 
 8. Create another listDivPrim() method that gets all the prime divisors of a given integer.'''
 
-print("--- Problem 4 - class BankAccount ---")
-print()
+class Computation:
+    print("--- Problem 5 - class Integers ---")
+    print()
+    def __init__(self):
+        self.n1 = 100
+        self.n2 = 300
+    def Sum(self):
+        sum = self.n1 + self.n2
+        print("Suma: ", sum)
+    def Dif(self):
+        dif = self.n2 - self.n1
+        print("Diferenta: ", dif)
+
+class Multi(Computation):
+    def Mul(self):
+        mul = self.n1 * self.n2
+        print("Multiplicare: ", mul)
+    def Div(self):
+        div = self.n2 / self.n1
+        print("Impartire: ", div)
+
+s = Multi()
+s.Sum()
+s.Dif()
+s.Mul()
+s.Div()
+
+
