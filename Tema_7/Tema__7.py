@@ -145,7 +145,7 @@ Create a display() method to display account details.'''
 
 def Bank():
     class BankAccount:
-        print("--- Problem 4 - class BankAccount ---")
+        print("----------------------------------------- Problem 4 - class BankAccount ------------------------------------------")
         print()
 
         def __init__(self, accountNumber, name, balance):
@@ -154,9 +154,11 @@ def Bank():
             self.balance = balance
 
         def Deposit(self):
-            print("Choose between the two accounts no. and names: 123 - Mark Twain / 124 - Tom Sawyer")
+            print("\n---------------------------------DEPOSIT-------------------------------")
+            print("Choose between the two accounts no. and names:   123 - Mark Twain / 124 - Tom Sawyer")
             c = int(input("Add account no.: "))
             n = input("Add account owner: ")
+            print("-------------------------")
             print(f'Account no. : {self.accountNumber}\nOwner\'s name: {self.name}\nBalance:      {self.balance} $')
             d = {c: n, n: 0}
             l = []
@@ -164,7 +166,7 @@ def Bank():
                 if c == self.accountNumber and n == self.name:
                     bani = float(input("Add money(0 out): "))
                     self.balance += bani
-                    print(f'New balance: {self.balance} $ ')
+                    print(f'New balance: {round(self.balance, 2)} $ ')
                     if bani == 0:
                         d.update({c: n, n: self.balance})
                         l.append(self.balance)
@@ -172,7 +174,7 @@ def Bank():
                         print(f'\n *    Cont no.: {self.accountNumber} -> {round(d[self.name],2)} $ cash')
                         for i in range(len(l)):
                             pass
-                        print(f' *    {self.name} has in his account {round(l[i],2)} $')
+                        print(f' *    {self.name} has in his account {round(l[i],2)} $\n')
                         ret = l[i]
                         return ret
                         exit()
@@ -182,33 +184,48 @@ def Bank():
                     exit()
 
         def Withdrawal(self):
-            wd = float(input("\nWithdrawal amount: "))
+            print("-------------------------------WITHDRAWAL------------------------------")
+            wd = float(input("Withdrawal amount: "))
             self.balance -= wd
             print(f'The amount left in {self.name}\'s account is: {round(self.balance, 2)} $\n')
 
         def bankFees(self, per):
+            print("----------------------------------FEES---------------------------------")
             self.per = per
             percent = float(self.per / 100) * self.balance
             percentage = self.balance - percent
-            print("Taxes 5% ")
+            print(f'Taxes {self.per}% ')
             print(f'{self.name} pays {round(percent, 2)} $ in taxes')
             print(f'{self.name} still has {round(percentage, 2)} $ in his account after paying his taxes\n')
 
         def display(self):
+            print("--------------------------------DISPLAY--------------------------------")
             print(f'--> Owner: {self.name}; ' + ' ---' + " Account no. " + f'{self.accountNumber}; ' + ' --' + " Amount: " + f'{round(self.balance, 2)} $; ' + ' --' + " Taxes: " + f'{round(float(self.per / 100) * self.balance,2)} $  representing {self.per}% fees')
+            print()
+        def displ(self):
+            print(f' ---->  Owner: {self.name}; ' + ' ---' + " Account no. " + f'{self.accountNumber}; ' + ' --' + " Amount: " + f'{round(self.balance, 2)} $; ' + ' --' + " Taxes: " + f'{round(float(5 / 100) * self.balance,2)} $  representing 5% fees')
 
-    b = BankAccount(123, "Mark Twain", 8000)
-    b.Deposit()
-    b.Withdrawal()
-    b.bankFees(5)
+    d = BankAccount(123, "Mark Twain", 8000)
+    da = BankAccount(124, "Tom Sawyer", 500)
+    d.displ()
+    da.displ()
 
-    ba = BankAccount(124, "Tom Sawyer", 500)
-    ba.Deposit()
-    ba.Withdrawal()
-    ba.bankFees(5)
-
-    b.display()
-    ba.display()
+    for i in range(1,4):
+        i = int(input("\nChoose 1 (first client), 2 (second client), 3 (quit) : \n"))
+        if i == 1:
+            b = BankAccount(123, "Mark Twain", 8000)
+            b.Deposit()
+            b.Withdrawal()
+            b.bankFees(5)
+            b.display()
+        elif i == 2:
+            ba = BankAccount(124, "Tom Sawyer", 500)
+            ba.Deposit()
+            ba.Withdrawal()
+            ba.bankFees(5)
+            ba.display()
+        elif i == 3:
+            exit()
 
 Bank()
 
