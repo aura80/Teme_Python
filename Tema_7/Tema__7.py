@@ -226,7 +226,7 @@ class Computation:
     def __init__(self):
         self.n1 = 100
         self.n2 = 300
-    def Sum(self):
+    def Suma(self):
         sum = self.n1 + self.n2
         print("Suma: ", sum)
     def Dif(self):
@@ -242,7 +242,7 @@ class Multi(Computation):
         print("Impartire: ", div)
 
 s = Multi()
-s.Sum()
+s.Suma()
 s.Dif()
 s.Mul()
 s.Div()
