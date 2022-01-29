@@ -1,3 +1,4 @@
+import os
 '''1. Write a Rectangle class in Python language, allowing you to build a rectangle with length and width attributes.
 Create a Perimeter() method to calculate the perimeter of the rectangle and a Area() method to calculate the area of ​​the rectangle.
 Create a method display() that display the length, width, perimeter and area of an object created using an instantiation on rectangle class.
@@ -15,11 +16,11 @@ def Pr1():
 
         def Perimeter(self):  # metodele clasei - arata behaviour
             p = 2 * (self.lungime + self.latime)
-            print("1 - Perimetrul este 2*({}+{}) = {} ".format(self.lungime, self.latime, p))
+            print("1 - Perimetrul este 2 * ({} + {}) = {} ".format(self.lungime, self.latime, p))
 
         def Area(self):
             a = self.lungime * self.latime
-            print("2 - Aria este {}*{} = {} ".format(self.lungime, self.latime, a))
+            print("2 - Aria este {} * {} = {} ".format(self.lungime, self.latime, a))
             return a
 
     perimetru = Rectangle(8, 2)  # instanta = apelarea clasei
@@ -66,7 +67,7 @@ def Pr1():
     print()
 
 
-Pr1()
+#Pr1()
 
 '''2. Define a Book class with the following attributes: Title, Author (Full name), Price.
 Set the View() method to display information for the current book.'''
@@ -89,7 +90,7 @@ def Pr2():
     print()
 
 
-Pr2()
+#Pr2()
 
 '''3. Create a Python class Person with attributes: name and age of type string.
 Create a display() method that displays the name and age of an object created via the Person class.
@@ -133,7 +134,7 @@ def Pr3():
     print()
 
 
-Pr3()
+#Pr3()
 
 '''4.Create a Python class called BankAccount which represents a bank account, having as attributes: accountNumber (numeric type), name (name of the account owner as string type), balance.
 Create a constructor with parameters: accountNumber, name, balance.
@@ -224,9 +225,10 @@ def Pr4():
             ba.bankFees(5)
             ba.display()
         elif i == 3:
-            exit()
+            #exit()
+            Menus()
 
-Pr()
+#Pr4()
 
 '''5
 1 - Create a Coputation class with a default constructor (without parameters) allowing to perform various calculations on integers numbers.
@@ -238,49 +240,202 @@ Pr()
 7. Then create an allTablesMult() method to display all the integer multiplication tables 1, 2, 3, ..., 9.
 6 - Create a static listDiv() method that gets all the divisors of a given integer on new list called  Ldiv. 
 8. Create another listDivPrim() method that gets all the prime divisors of a given integer.'''
+def Pr5():
+    class Computation:
+        print("--- Problem 5 - class Integers ---")
+        print()
+        def __init__(self):
+            self.n1 = 100
+            self.n2 = 300
+        def Suma(self):
+            sum = self.n1 + self.n2
+            print("+   Suma: ", sum)
+        def Dif(self):
+            dif = self.n2 - self.n1
+            print("-   Diferenta: ", dif)
+        def testPrim(self, n):
+            self.n = n
+            k = 0
+            for i in range(1, n+1):
+                if n % i == 0 :
+                    k += 1
+            if k == 2:
+                #return f' {self.n} prime number'
+                print(f'  * {self.n} - prime number')
+                return self.n
+            else:
+                print(f'    {n}  not prime number')
+        def testPrims(self, a, b):
+            self.a = a
+            self.b = b
+            k = True
+            l = []
 
-class Computation:
-    print("\n--- Problem 5 - class Integers ---")
-    print()
-    def __init__(self):
-        self.n1 = 100
-        self.n2 = 300
-    def Suma(self):
-        sum = self.n1 + self.n2
-        print("Suma: ", sum)
-    def Dif(self):
-        dif = self.n2 - self.n1
-        print("Diferenta: ", dif)
-    def testPrim(self):
-        pass
+            if a >= 1 and b > 1 :
+                for i in range(self.a, self.b):
+                    for j in range(2, i):
+                        if i % j == 0:
+                            k = False
+                            break
+                        else:
+                            k = True
+                    if k and i != 1 and i != 2:
+                        l.append(i)
 
-class Multi(Computation):
-    def Mul(self):
-        mul = self.n1 * self.n2
-        print("Multiplicare: ", mul)
-    def Div(self):
-        div = self.n2 / self.n1
-        print("Impartire: ", div)
-    def Factorial(self, n):
-        self.n = n
-        p = 1
-        for i in range(1,n+1):
-            p = p * i
-        print(f'Factorialul lui {self.n} este: {p}')
-    def Sum(self, n):
-        self.n = n
-        s = 0
-        for i in range(1,n+1):
-            s = s + i
-        print(f'Suma primelor {self.n} numere este: {s}')
+                print(f'Prime between ({self.a},{self.b}):  {l}')
+
+            elif a < 1 or b <= 1:
+                print(f'{a} {b} Not prime numbers')
 
 
-s = Multi()
-s.Suma()
-s.Dif()
-s.Mul()
-s.Div()
-s.Factorial(5)
-s.Sum(5)
+    class Multi(Computation):
+        def Mul(self):
+            mul = self.n1 * self.n2
+            print("*   Multiplicare: ", mul)
+        def Div(self):
+            div = self.n2 / self.n1
+            print("/   Impartire: ", div)
+        def Factorial(self, n):
+            self.n = n
+            p = 1
+            for i in range(1,n+1):
+                p = p * i
+            print(f'n!  Factorialul lui {self.n} este: {p}')
+        def Sum(self, n):
+            self.n = n
+            s = 0
+            for i in range(1,n+1):
+                s = s + i
+            print(f'+   Suma primelor {self.n} numere este: {s}')
+        def Mult(self, a, b):
+            self.a = a
+            self.b = b
+            mult = self.a * self.b
+            print("*   Multiplicare: ", mult)
 
+        def tableMult(self, n):
+            self.n = n
+            p = 1
+            for i in range(1, 11):
+                p = self.n * i
+                print(f'    {self.n} x {i} = {p}')
+                m = Multi()
+                m.Mult(self.n, i)
+        def allTablesMult(self):
+            p = 1
+            for i in range(1, 10):
+                print(f'\n--- Multiplication with {i}: \n')
+                for j in range(1, 11):
+                    p = i * j
+                    print(f' {i} x {j} = {p} ')
+        def listDiv(self, n):
+            self.n = n
+            l = list()
+            for i in range(1, self.n+1):
+                if self.n % i == 0:
+                    l.append(i)
+            print(f'List of {self.n}\'s divisors is: {l} ')
+            return l
+        def listDivPrim(self, n):
+            self.n = n
+            d = Multi()
+            l = []
+            for j in d.listDiv(self.n):
+                m = d.testPrim(j)
+                if m != None:
+                    l.append(m)
+            print(f'Prime divisors of {self.n} are: {l} ')
 
+    def Menu():
+        s = Multi()
+        print("----------------------------------------------------------------------------MENU-------------------------------------------------------------------------------")
+        #print("------------------MENIU------------------")
+        print('''1 - Sum             2 - Difference                  3 - Multiplication              4 - Division           5 - Factorial            6 - Sum 1 + 2 + 3 + ... + n     
+7 - Prime no.       8 - Prime no. in interval       9 - Table of multiplication     10 - Table of multiplication of first 9 no      11 - List of divisors       
+12 - List of prime divisors                         13 - Exit\n''')
+        x = int(input(" <--->  Choose option: "))
+        while True:
+
+            if x == 1:
+                s.Suma()
+                Menu()
+            elif x == 2:
+                s.Dif()
+                Menu()
+            elif x == 3:
+                s.Mul()
+                Menu()
+            elif x == 4:
+                s.Div()
+                Menu()
+            elif x == 5:
+                s.Factorial(5)
+                s.Factorial(15)
+                Menu()
+            elif x == 6:
+                s.Sum(5)
+                s.Sum(25)
+                Menu()
+            elif x == 7:
+                s.testPrim(17)
+                s.testPrim(28)
+                Menu()
+            elif x == 8:
+                s.testPrims(10, 30)
+                s.testPrims(2, 10)
+                s.testPrims(5, 67)
+                s.testPrims(-3, 27)
+                s.testPrims(-9, -3)
+                s.testPrims(1, 22)
+                Menu()
+            elif x == 9:
+                s.tableMult(5)
+                Menu()
+            elif x == 10:
+                s.allTablesMult()
+                Menu()
+            elif x == 11:
+                s.listDiv(21)
+                s.listDiv(42)
+                Menu()
+            elif x == 12:
+                s.listDivPrim(42)
+                Menu()
+            elif x == 13:
+                print("Exit")
+                #exit()
+                Menus()
+            else:
+                print("Wrong option")
+                Menu()
+    Menu()
+#Pr5()
+
+def Menus():
+    print("--------------------------------MENU--------------------------------")
+    print(''' 1 - Problem_1       2 - Problem_2       3 - Problem_3       4 - Problem_4       5 - Problem_5      6 - Exit''')
+    while True:
+        print()
+        o = int(input("Choose option: "))
+        if o == 1:
+            Pr1()
+            Menus()
+        elif o == 2:
+            Pr2()
+            Menus()
+        elif o == 3:
+            Pr3()
+            Menus()
+        elif o == 4:
+            Pr4()
+            Menus()
+        elif o == 5:
+            Pr5()
+            Menus()
+        elif o == 6:
+            print("EXIT")
+            exit()
+        else:
+            print("Invalid option")
+            Menus()
+Menus()
