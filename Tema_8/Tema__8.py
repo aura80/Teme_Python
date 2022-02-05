@@ -99,6 +99,34 @@ def anagram4():
     print(f'Counter for "{a}" is:   {y}')
     print(f'Counter for anagrams is:   {z}\n')
 
+def min_array1():
+    l = [4,8,6,1,2,9,4]
+    m = []
+    for i in range(0, len(l)-1):
+        d = l[i+1] - l[i]
+        m.append(abs(d))
+        minim = None
+        for j in range(len(m)):
+            if minim is None:
+                minim = m[j]
+            elif m[j] < minim:
+                minim = m[j]
+                idx = j
+        mini = m[0]
+        for j in range(len(m)):
+            if m[j] < mini:
+                mini = m[j]
+                idex = j
+
+    print("Minim: {}  Index: {}".format(minim,idx))
+    print(f'Minim: {mini}  Index: {idex}')
+
+def min_array2():
+    l = [4,8,6,1,2,9,4]
+    m = min(l)
+    index = l.index(m)
+    print(f'Minim: {m}  Index: {index}')
+
 def min_array():
     l = [4,8,6,1,2,9,4]
     m = []
@@ -112,6 +140,8 @@ def min_array():
     print("Differences: ")
     print(m)
     print(f'\nThe minimum difference between the elements of the array is: {min(m)} with index {index}\n')
+    min_array1()
+    min_array2()
 #min_array()
 
 def menu():
