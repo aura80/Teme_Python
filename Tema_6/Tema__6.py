@@ -6,7 +6,7 @@ def noua():
         if f[i] == 9:
             s += 1
         i = i + 1
-    print(f'Cifra 9 se regaseste in {f} de {s} ori') #
+    print(f'Cifra 9 se regaseste in {f} de {s} ori')
 # noua()
 
 def omite():
