@@ -6,7 +6,7 @@ print("-------Problema 1-------")
 # [1, 9, 9, 3, 9] → 3
 
 def numarare():
-    l = list(input("Dati lista (9 de mai multe ori): ").split())    #
+    l = list(input("Dati lista (9 de mai multe ori): ").split())
     print(l)
     s = 0
     for i in l:
