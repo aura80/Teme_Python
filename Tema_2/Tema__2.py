@@ -12,20 +12,20 @@ y = 10.5
 #string
 x = "Acesta este "
 y = 'un sir de caractere'
-print("2. x + y: ", x + y)
+print("\n2. x + y: ", x + y)
 
 print("---")
 restanta = 0
 notaFinala = 10.0
 laborator = "Introducere in informatica"
-print("3. Tipul lui restanta este: ", type(restanta))
+print("\n3. Tipul lui restanta este: ", type(restanta))
 print("   Tipul lui notaFinala este: ", type(notaFinala))
 print("   Tipul lui laborator este: ", type(laborator))
 
 print("---")
 x = 15
 y = 2
-print("4. 15 * 2 = ", x * y)
+print("\n4. 15 * 2 = ", x * y)
 
 print("---")
 sir = "Afara ninge"
