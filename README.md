@@ -22,3 +22,8 @@ Click clone (The new repository appear on your machine)
 Keep you project up to date on github : commit and push
 
 Open the new repository(project) with the python editor (Pycharm)
+
+# About homeworks
+In this project I created directories containing python files where I proceeded to accomodate myself with 
+the Python syntax, comments, variables, data types, operators, lists, dictionaries,if .. else instruction, 
+for and while loops, methods, classes, inheritance, menus. 
