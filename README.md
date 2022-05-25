@@ -27,3 +27,5 @@ Open the new repository(project) with the python editor (Pycharm)
 In this project I created directories containing python files where I proceeded to accomodate myself with 
 the Python syntax, comments, variables, data types, operators, lists, dictionaries,if .. else instruction, 
 for and while loops, methods, classes, inheritance, menus. 
+To run the files we have to go to Edit Configurations and set the script path, Python interpreter and the 
+working directory. After that we have to hit ctrl + F5 or ctrl + shift + F10 on the opened file.
