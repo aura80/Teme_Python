@@ -1,5 +1,5 @@
 # Teme_Python
-Colectia de teme Python
+Python homeworks collection
 # Setup Instructions
 Python Setup
 Download the latest Python version from Python.org.
