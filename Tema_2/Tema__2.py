@@ -29,12 +29,12 @@ print("4. 15 * 2 = ", x * y)
 
 print("---")
 sir = "Afara ninge"
-print("5. Primul element al sirului nu este egal cu primul - ", sir[0]!=sir[10])
+print("\n5. Primul element al sirului nu este egal cu primul - ", sir[0]!=sir[10])
 
 print("---")
 str_x = "Emma is good developer. Emma is a writer"
 sub = "Emma"
-print("6. First string is: " + str_x)
+print("\n6. First string is: " + str_x)
 print("   Substring is: " + sub)
 rez = str_x.count(sub)
 print(f'   Frecventa lui sub in str_x este de --- {rez} --- ori')
@@ -42,14 +42,14 @@ print(f'   Frecventa lui sub in str_x este de --- {rez} --- ori')
 print("---")
 str = "eu merg la mare"
 l = len(str)
-print(f'7,8. Lungime sir "eu merg la mare" = {l},  ', '"', str[0:2] + str[-2:] ,'"')
+print(f'\n7,8. Lungime sir "eu merg la mare" = {l},  ', '"', str[0:2] + str[-2:] ,'"')
 
 print("---")
 string = "restart"
 r = string[0:1]
 d = "$"
 newOrder = "resta{}t"
-print("9. r --> $ : ", newOrder.format(d))
+print("\n9. r --> $ : ", newOrder.format(d))
 
 print("---Varianta 9.2")
 cuv = "restart"
@@ -59,7 +59,7 @@ final_cuv = first + cuv[1:]
 print(final_cuv)
 
 print("---")
-print("10. I have 1000 dollars so I can buy 3 football for 450.00 dollars.")
+print("\n10. I have 1000 dollars so I can buy 3 football for 450.00 dollars.")
 print(f'    I have 1000 dollars so I can buy 3 football for 450.00 dollars.')
 fir = '    I have {} dollars so I can buy {} football for {} dollars.'
 totalMoney  = 1000
@@ -79,7 +79,7 @@ print(firU[0:])
 print(firU[0:-1])
 
 print("---")
-a = input("11. Latura mare a dreptunghiului este: ")
+a = input("\n11. Latura mare a dreptunghiului este: ")
 b = input("    Latura mica a dreptunghiului este: ")
 r = input("    Raza cercului este:                ")
 PI = 3.14
@@ -95,7 +95,7 @@ print("foo'bar")
 #print('foo'bar')  -  nu este corect
 
 print("---")
-username = input("13. Define username: ")
+username = input("\n13. Define username: ")
 password = input("    Define password: ")
 s = 'The password for user {} is {} with {} characters long'
 
